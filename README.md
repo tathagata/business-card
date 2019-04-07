@@ -1,12 +1,6 @@
 Business Card
 =============
-
-Example:
-
-<div>
-    <img src="images/front.png" alt-="front side business card" width="200px"/>
-    <img src="images/back.png" alt-="back side business card" width="200px"/>
-</div>
+Forked from Olivier Pieters template for buinsess card. Very clean and elegant.
 
 How this business card was designed, is explained in [this blog post](https://olivierpieters.be/blog/2017/02/11/designing-a-business-card-in-latex).
 
@@ -27,24 +21,17 @@ docker run \
     /bin/bash -c 'cd /tmp/src/src ; xelatex front.tex;'
 ```
 
-Building Documents
+Building
 ------------------
+`make build` 
+    - uses `accupara/business-cards` docker image to build the card
+  
+`make restore`
+    - restores personal data filr from Dropbox
 
-Build the front and back sides with XeLaTeX:
+`make backup`
+    - copies personal data file `data.tex` to Dropbox
 
-```shell
-xelatex src/front.tex
-xelatex src/back.tex
-```
-
-SVG Files
----------
-
-LaTeX is not equipped to handle SVG files directly. A conversion to a PDF file is needed. This can be done using an external tool such as Inkscape:
-
-```shell
-inkscape --without-gui --export-area-drawing --file=logo.svg --export-pdf=logo.pdf
-```
 
 License
 -------
