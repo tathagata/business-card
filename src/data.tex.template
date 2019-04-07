@@ -1,0 +1,8 @@
+\newcommand{\firstname}{}
+\newcommand{\lastname}{}
+\newcommand{\email}{}
+\newcommand{\phone}{}
+\newcommand{\website}{}
+\newcommand{\jobtitle}{}
+\newcommand{\handle}{}
+

@@ -11,6 +11,7 @@
 \usepackage{tikz}            % drawing
 \usepackage{fontawesome}     % icon font
 \usepackage{xcolor}          % more colour options
+\usepackage{graphicx}
 
 % load and configure tikz libraries
 \usetikzlibrary{matrix,calc,positioning}
@@ -31,6 +32,12 @@
 \definecolor{textcolour}{HTML}{2f3142}     % dark
 \definecolor{jobtitlecolour}{HTML}{474a65} % light dark
 
+% data
+\input{data.tex}
+
+% graphicspath
+\graphicspath{ {../images/} }
+
 % change global colour
 \makeatletter
 \newcommand{\globalcolor}[1]{%
@@ -46,9 +53,9 @@
     \begin{tikzpicture}
       % name
       \matrix[every node/.style={anchor=center,font=\huge},anchor=center] (name) {
-        \node{John}; \\
-        \node{Doe}; \\
-        \node{\color{jobtitlecolour}\normalsize\textit{job title}}; \\
+        \node{T}; \\
+                \node at (0,.5) {\includegraphics[width=25mm]{here_logo_1920_1008}}; \\
+        \node{\color{jobtitlecolour}\normalsize\textit{\jobtitle}}; \\
       };
       % sep line 1
       \node[below=\seplinedistance of name] (hl1) {};
@@ -57,10 +64,9 @@
       \matrix [below=\seplinedistance of hl1,%
                column 1/.style={anchor=center,color=iconcolour},%
                column 2/.style={anchor=west}] (contact){
-        \node{\faGlobe}; & \node{johndoe.com};\\
-        \node{\faEnvelope}; &\node{me@johndoe.com};\\
-        \node{\faPhone}; &\node{+1 781 555 1212}; \\
-        \node{\faGithub}; &\node{johndoe}; \\
+        \node{\faGlobe}; & \node{\website};\\
+        \node{\faEnvelope}; &\node{\email};\\
+        \node{\faPhone}; &\node{\phone}; \\
       };
       % sep line 2
       \node[below=\seplinedistance of contact] (hl2) {};
