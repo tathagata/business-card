@@ -67,18 +67,18 @@
         \node{\faGlobe}; & \node{\website};\\
         \node{\faEnvelope}; &\node{\email};\\
         \node{\faPhone}; &\node{\phone}; \\
+        \node {\faCalendar}; & \node{tathagata.me/chat} ; \\
       };
       % sep line 2
       \node[below=\seplinedistance of contact] (hl2) {};
-      \draw[line width=\seplineheight,color=seplinecolour] (hl2)++(-\seplinewidth/2,0) -- ++(\seplinewidth,0);
+      % \draw[line width=\seplineheight,color=seplinecolour] (hl2)++(-\seplinewidth/2,0) -- ++(\seplinewidth,0);
       % interests
-      \matrix [below=\seplinedistance of hl2,
-         every node/.style={anchor=center,font=\LARGE}]
-         (interests) {
-        \node{\faCode}; & \node{\faCoffee}; &
-        \node{\faLock}; & \node{\faWrench}; &
-        \node{\faCameraRetro}; \\
-      }; 
+      % \matrix [below=\seplinedistance of hl2,
+      %   every node/.style={anchor=center,font=\LARGE}]
+      %   (interests) {
+      %  \node at (0,1) {\includegraphics[width=5mm]{py}}; & 
+      %  \node 
+      % }; 
     \end{tikzpicture}
   \end{center}
   \vspace*{\fill}
